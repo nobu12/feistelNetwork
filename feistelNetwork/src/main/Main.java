@@ -5,7 +5,7 @@ import encryption.Decryption;
 import encryption.Encryption;
 
 public class Main {
-	// ラウンド階数
+	// ラウンド回数
 	public static int ROUND_EXEC_TIME = 3;
 
 	// ラウンド関数で使用する秘密鍵
