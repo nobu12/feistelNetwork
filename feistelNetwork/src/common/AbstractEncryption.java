@@ -21,12 +21,12 @@ public abstract class AbstractEncryption {
 		byte leftArray[][];
 		// 左側の文字は秘密データの文字数が偶数、奇数の場合を考慮している
 		if (secretData.length() % 2 == 0) {
-			leftArray = new byte[Main.ROUND_EXEC_TIME+1][left.length()];
+			leftArray = new byte[Main.ROUND_EXEC_TIME + 1][left.length()];
 		} else {
-			leftArray = new byte[Main.ROUND_EXEC_TIME+1][left.length() + 1];
+			leftArray = new byte[Main.ROUND_EXEC_TIME + 1][left.length() + 1];
 		}
 		// 右側の文字列データ、暗号化されたデータを入れるための変数
-		byte rightArray[][] = new byte[Main.ROUND_EXEC_TIME+1][right.length()];
+		byte rightArray[][] = new byte[Main.ROUND_EXEC_TIME + 1][right.length()];
 
 		// 入力値の初期化
 		for (int i = 0; i < left.length(); i++) {
@@ -53,10 +53,10 @@ public abstract class AbstractEncryption {
 
 		String returnData = "";
 		for (int i = 0; i < right.length(); i++) {
-			returnData = returnData + String.valueOf((char)leftArray[Main.ROUND_EXEC_TIME][i]);
+			returnData = returnData + String.valueOf((char) leftArray[Main.ROUND_EXEC_TIME][i]);
 		}
 		for (int i = 0; i < right.length(); i++) {
-			returnData = returnData + String.valueOf((char)rightArray[Main.ROUND_EXEC_TIME][i]);
+			returnData = returnData + String.valueOf((char) rightArray[Main.ROUND_EXEC_TIME][i]);
 		}
 		return returnData;
 	}
